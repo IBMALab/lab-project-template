@@ -1,0 +1,82 @@
+# ===== IBMALab standard .gitignore =====
+
+# ---------- Data (NEVER commit) ----------
+data/*
+!data/README.md
+*.dcm
+*.nii
+*.nii.gz
+*.edf
+*.bdf
+*.gdf
+*.set
+*.fdt
+*.mat
+!configs/**/*.mat
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz
+
+# ---------- Model weights / checkpoints ----------
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pb
+checkpoints/
+saved_models/
+wandb/
+mlruns/
+runs/
+lightning_logs/
+
+# ---------- Secrets ----------
+.env
+*.env
+secrets.*
+*.pem
+*.key
+credentials*.json
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---------- MATLAB ----------
+*.asv
+*.m~
+*.mex*
+slprj/
+*.slxc
+codegen/
+
+# ---------- LaTeX ----------
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# ---------- OS / Editor ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
