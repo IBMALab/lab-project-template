@@ -1,0 +1,18 @@
+# Python dependencies - edit to match your project, then pin versions:
+#   pip freeze > requirements.txt
+# MATLAB-only projects: list required toolboxes in README instead.
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+pyyaml
+jupyter
+# Deep learning (uncomment one):
+# torch
+# tensorflow
+# Biomedical (uncomment as needed):
+# mne          # EEG / MEG
+# nibabel      # NIfTI MRI
+# pydicom      # DICOM
+# SimpleITK    # medical image processing
