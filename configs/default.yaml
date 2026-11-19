@@ -1,0 +1,40 @@
+# Default experiment configuration
+# Keep ALL parameters here (not hard-coded in scripts).
+# Copy this file for each experiment, e.g. configs/exp01_baseline.yaml
+
+experiment:
+  name: baseline
+  seed: 42                      # fix random seeds for reproducibility
+
+paths:                          # relative paths only, never C:\Users\...
+  raw_data: data/raw
+  processed_data: data/processed
+  results: results
+  checkpoints: checkpoints      # ignored by .gitignore
+
+data:
+  sampling_rate_hz: 250
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+preprocessing:
+  bandpass_low_hz: 0.5
+  bandpass_high_hz: 40
+  normalize: true
+
+model:
+  name: cnn
+  hidden_units: 64
+  dropout: 0.5
+
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  optimizer: adam
+  early_stopping_patience: 10
+
+evaluation:
+  metrics: [accuracy, f1, auc]
+  n_folds: 5
